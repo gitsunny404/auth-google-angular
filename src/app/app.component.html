@@ -1,0 +1,12 @@
+<!-- <asl-google-signin-button *ngIf="!user"></asl-google-signin-button> -->
+
+<asl-google-signin-button type='icon' size='large' *ngIf="!user"></asl-google-signin-button>
+
+<div *ngIf="user">
+  <div>
+    <h4>{{user.name}}</h4>
+    <h4>{{user.email}}</h4>
+  </div>
+</div>
+
+<button (click)=signOut() *ngIf="user" >Signout</button>
